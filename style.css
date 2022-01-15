@@ -11,6 +11,7 @@
   --darkblue: #00008a;
   --blue: #3a3ae5;
   --light-green: #0cf221;
+  --red: #ec2427;
 }
 
 body {
@@ -45,17 +46,19 @@ body {
     hsl(293deg 99% 54%) 89%,
     hsl(297deg 100% 50%) 100%
   );
+  position: relative;
 }
 
 .result {
   font-family: "Orbitron", sans-serif;
-  padding: 1.65em;
+  text-align: right;
+  padding: 1.5em;
   background: var(--white);
   width: 80%;
   border-radius: 10px;
   margin-top: 0.6em;
   margin-bottom: 2em;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 
 button {
@@ -71,6 +74,17 @@ button {
   cursor: pointer;
 }
 
-.equal {
+.equals {
   background: var(--light-green);
+}
+
+.delete {
+  position: absolute;
+  top: 8.7%;
+  left: 8.7%;
+  width: 53px;
+  box-shadow: none;
+  color: var(--white);
+  background: var(--red);
+  border-radius: 10px 0 0 10px;
 }

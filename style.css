@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Orbitron:wght@400;500&display=swap");
 
 * {
   margin: 0;
@@ -8,15 +8,18 @@
 
 :root {
   --white: #fff;
-  --darkblue: #00008a;
+  --dark-blue: #00008a;
   --blue: #3a3ae5;
   --light-green: #0cf221;
+  --dark-green: #006400;
   --red: #ec2427;
+  --orange: #ff9900;
+  --yellow: #f9e130;
 }
 
 body {
   font-family: "Orbitron", sans-serif;
-  background: var(--darkblue) url("images/numbers.jpg") no-repeat center/cover;
+  background: var(--dark-blue) url("images/numbers.jpg") no-repeat center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,8 +33,8 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--blue);
-  width: 300px;
-  height: 450px;
+  width: 20em;
+  height: 33em;
   border-radius: 15px;
   background-image: linear-gradient(
     45deg,
@@ -46,19 +49,30 @@ body {
     hsl(293deg 99% 54%) 89%,
     hsl(297deg 100% 50%) 100%
   );
-  position: relative;
+}
+
+.display-window {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  margin-right: 0.6em;
+  width: 75%;
 }
 
 .result {
-  font-family: "Orbitron", sans-serif;
-  text-align: right;
-  padding: 1.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 200px;
+  height: 53px;
   background: var(--white);
-  width: 80%;
-  border-radius: 10px;
-  margin-top: 0.6em;
-  margin-bottom: 2em;
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  border-radius: 0 10px 10px 0;
 }
 
 button {
@@ -72,19 +86,41 @@ button {
   margin: 0.5em 0.2em;
   border: none;
   cursor: pointer;
+  transition: all 0.1s;
+}
+
+button:hover,
+button:focus {
+  background: var(--yellow);
 }
 
 .equals {
   background: var(--light-green);
+  width: 112px;
 }
 
-.delete {
-  position: absolute;
-  top: 8.7%;
-  left: 8.7%;
-  width: 53px;
-  box-shadow: none;
+.equals:hover,
+.equals:focus {
+  background: var(--dark-green);
+  color: var(--white);
+}
+
+.arrow {
+  background: var(--orange);
+}
+
+.clear {
+  width: 60px;
+  height: 55px;
   color: var(--white);
   background: var(--red);
   border-radius: 10px 0 0 10px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.clear:hover,
+.clear:focus {
+  background: var(--red);
+  color: var(--dark-blue);
 }

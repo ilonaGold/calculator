@@ -8,18 +8,19 @@
 
 :root {
   --white: #fff;
-  --dark-blue: #00008a;
   --blue: #3a3ae5;
+  --dark-blue: #00008a;
+  --very-dark-blue: #151b33;
   --light-green: #0cf221;
   --dark-green: #006400;
   --red: #ec2427;
-  --orange: #ff9900;
-  --yellow: #f9e130;
+  --violet: #ee82ee;
 }
 
 body {
   font-family: "Orbitron", sans-serif;
-  background: var(--dark-blue) url("images/numbers.jpg") no-repeat center/cover;
+  background: var(--very-dark-blue) url("images/numbers.jpg") no-repeat
+    center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +59,7 @@ body {
   margin-top: 0.5em;
   margin-bottom: 1.5em;
   margin-right: 0.6em;
-  width: 75%;
+  width: 76%;
 }
 
 .result {
@@ -91,22 +92,19 @@ button {
 
 button:hover,
 button:focus {
-  background: var(--yellow);
+  background: var(--violet);
+  color: var(--white);
 }
 
 .equals {
   background: var(--light-green);
-  width: 112px;
+  width: 115px;
 }
 
 .equals:hover,
 .equals:focus {
   background: var(--dark-green);
   color: var(--white);
-}
-
-.arrow {
-  background: var(--orange);
 }
 
 .clear {
